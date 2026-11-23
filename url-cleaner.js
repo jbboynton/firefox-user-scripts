@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name        General URL Cleaner Revived
-// @namespace   https://greasyfork.org/en/users/594496-divided-by
+// @name        URL Cleaner
+// @namespace   https://github.com/jbboynton/firefox-user-scripts
 // @author      dividedby
-// @description Cleans URLs from various popular sites and removes tracking parameters
+// @description Strips tracking parameters from URLs. Based on General URL Cleaner Revived 5.2.0 by dividedby.
 // @version     5.2.0
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
-// @homepageURL https://github.com/dividedby/General-URL-Cleaner-Revived
-// @supportURL  https://github.com/dividedby/General-URL-Cleaner-Revived/issues
+// @homepageURL https://github.com/jbboynton/firefox-user-scripts/blob/main/url-cleaner.js
+// @supportURL  https://github.com/jbboynton/firefox-user-scripts/issues
 // @contributionURL     https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dividedbygit@gmail.com&item_name=Greasy+Fork+Donation
 // @contributionAmount  $1
 // @include     https://www.newegg.com/*
