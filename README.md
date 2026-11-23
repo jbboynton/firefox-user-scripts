@@ -1,0 +1,62 @@
+# Firefox user scripts
+
+Small user scripts that remove clutter from websites I use every day.
+Each script runs in [Violentmonkey][vm] and changes one site.
+
+| Script | Site | What it does |
+|---|---|---|
+| `google-calendar.user.js` | Google Calendar | Hides upsells and unused parts |
+
+[vm]: https://violentmonkey.github.io/
+
+## Google Calendar cleanup
+
+The script hides these parts of Google Calendar:
+
+- The "Upgrade" button in the header
+- The Calendar and Tasks switch in the header
+- The arrow that opens the side panel
+- "Meet with…" and "Booking pages" in the sidebar
+- The Birthdays and Tasks calendars in "My calendars"
+- "Task" and "Appointment schedule" in the Create menu
+
+Google Calendar places each calendar row with code, so a hidden row
+would normally leave a gap. The script moves the rows below it up to
+close the gap.
+
+## Install
+
+1. Install the [Violentmonkey][vm] extension in Firefox.
+2. Open the raw file on GitHub, for example
+   [`google-calendar.user.js`][cal].
+3. Violentmonkey shows an install page. Click **Install**.
+
+[cal]: https://github.com/jbboynton/firefox-user-scripts/raw/main/google-calendar.user.js
+
+## Configure
+
+Each script lists what it hides near the top of the file. For
+example, to keep the Birthdays calendar, remove `'Birthdays'` from
+`CALENDARS` in `google-calendar.user.js`.
+
+> [!NOTE]
+> The scripts find most elements by their label, such as "Upgrade".
+> If you use Google Calendar in another language, change the labels
+> to match.
+
+## Contribute
+
+These scripts are for my own use. However, you are welcome to open an
+issue or a pull request.
+
+To test a change, paste the script into Violentmonkey and reload the
+site. There is no build step.
+
+> [!WARNING]
+> Google changes its page code often. If an element comes back, its
+> label or structure probably changed.
+
+## Source tour
+
+- `*.user.js`: one script per site. The block at the top of each file
+  tells Violentmonkey which pages the script runs on.
