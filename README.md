@@ -6,7 +6,7 @@ Each script runs in [Violentmonkey][vm] and changes one site.
 | Script | Site | What it does |
 |---|---|---|
 | `google-calendar-cleanup.js` | Google Calendar | Hides upsells and unused parts |
-| `url-cleaner.user.js` | Many | Removes tracking data from links |
+| `url-cleaner.js` | Many | Removes tracking data from links |
 
 [vm]: https://violentmonkey.github.io/
 
@@ -73,7 +73,7 @@ that installed copies update.
 
 ## License
 
-`url-cleaner.user.js` is a copy of [General URL Cleaner Revived][gucr]
+`url-cleaner.js` is based on [General URL Cleaner Revived][gucr]
 by dividedby. It is under the GNU General Public License, version 3
 or later. The full text is in [`LICENSES/GPL-3.0.txt`][gpl].
 
