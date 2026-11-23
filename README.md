@@ -5,7 +5,7 @@ Each script runs in [Violentmonkey][vm] and changes one site.
 
 | Script | Site | What it does |
 |---|---|---|
-| `google-calendar.user.js` | Google Calendar | Hides upsells and unused parts |
+| `google-calendar-cleanup.js` | Google Calendar | Hides upsells and unused parts |
 
 [vm]: https://violentmonkey.github.io/
 
@@ -27,17 +27,23 @@ close the gap.
 ## Install
 
 1. Install the [Violentmonkey][vm] extension in Firefox.
-2. Open the raw file on GitHub, for example
-   [`google-calendar.user.js`][cal].
-3. Violentmonkey shows an install page. Click **Install**.
+2. In Violentmonkey, click **+** and then **Install from URL**.
+3. Enter the raw URL of the script, for example:
 
-[cal]: https://github.com/jbboynton/firefox-user-scripts/raw/main/google-calendar.user.js
+   ```text
+   https://raw.githubusercontent.com/jbboynton/firefox-user-scripts/main/google-calendar-cleanup.js
+   ```
+
+4. Violentmonkey shows an install page. Click **Install**.
+
+Violentmonkey checks the same URL for updates. It installs an update
+when the `@version` number at the top of the script goes up.
 
 ## Configure
 
 Each script lists what it hides near the top of the file. For
 example, to keep the Birthdays calendar, remove `'Birthdays'` from
-`CALENDARS` in `google-calendar.user.js`.
+`CALENDARS` in `google-calendar-cleanup.js`.
 
 > [!NOTE]
 > The scripts find most elements by their label, such as "Upgrade".
@@ -50,7 +56,8 @@ These scripts are for my own use. However, you are welcome to open an
 issue or a pull request.
 
 To test a change, paste the script into Violentmonkey and reload the
-site. There is no build step.
+site. There is no build step. Raise `@version` with every change, so
+that installed copies update.
 
 > [!WARNING]
 > Google changes its page code often. If an element comes back, its
@@ -58,5 +65,5 @@ site. There is no build step.
 
 ## Source tour
 
-- `*.user.js`: one script per site. The block at the top of each file
-  tells Violentmonkey which pages the script runs on.
+- `*.js`: one script each. The block at the top of each file tells
+  Violentmonkey which pages the script runs on.

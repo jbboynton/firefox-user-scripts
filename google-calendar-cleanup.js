@@ -4,8 +4,9 @@
 // @match       https://calendar.google.com/*
 // @grant       none
 // @run-at      document-idle
-// @version     1.5
+// @version     1.6
 // @description Hide Calendar clutter: upsells, unused panels and calendars.
+// @homepageURL https://github.com/jbboynton/firefox-user-scripts/blob/main/google-calendar-cleanup.js
 // ==/UserScript==
 
 (() => {
